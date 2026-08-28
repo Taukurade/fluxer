@@ -1,4 +1,4 @@
-name: Build Fluxer Windows App (1)
+name: Build Fluxer Windows App
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
         with:
           name: fluxer-windows-exe
           path: |
-            fluxer_desktop/release/*.exe
-            fluxer_desktop/dist/*.exe
-            fluxer_desktop/release/*.zip
-            fluxer_desktop/dist/*.zip
+            **/*.exe
+            **/release/
+            **/dist/
+          if-no-files-found: error
